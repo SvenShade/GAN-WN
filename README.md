@@ -7,7 +7,7 @@ Current quantitative metrics (e.g. signal-to-noise ratio) can be helpful in gene
 
 ### 2. Super-resolution as Spectral Inpainting
 
-### 3. Synthesis as Style Transfer (Translating Harmonic Spectra)
+### 3. Synthesis as Style Transfer Onto Harmonics
 
 Here is the melody from the folk song, 'Scarborough Fair', as played by a sinewave generator.
 These sinewaves include the fundamental as well as the first few harmonics, in order to provide structure for cGAN to translate.
