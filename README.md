@@ -4,15 +4,21 @@ Current quantitative metrics (e.g. signal-to-noise ratio) can be helpful in gene
 
 
 ### 1. Source-separation as Denoising
+We start with a recording of a piano and violin duet, playing a phrase from Bach.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/source_sep_full.wav" type='audio/wav'></audio>
+We then apply the STFT to obtain a spectrogram, Mel-scale the frequencies, and apply the generator of our cGAN convolutionally. Finally, we reconstruct audio from this spectrogram, by rescaling the frequencies and performing Griffin-Lim reconstruction:
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/source_sep_violin.wav" type='audio/wav'></audio>
 
 ### 2. Super-resolution as Spectral Inpainting
+First, the Paganini violin phrase, at a sample rate of 4kHz (ultra low-fidelity).
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_lofi.wav" type='audio/wav'></audio>
+Then, after cGAN has performed inpainting on the lost (higher) frequencies, we reconstruct the audio.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_cGAN_bandavg.wav" type='audio/wav'></audio>
+Here's the audio after a second cGAN has tried to restore detail from the lossy reconstruction process.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_cGAN_logcont.wav" type='audio/wav'></audio>
-<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_unguided.wav" type='audio/wav'></audio>
+Alternatively, we can use a Wavenet to reconstruct the raw audio directly from the Mel-spectrogram. However, this model took over 3 weeks to see convergence on our NVIDIA GTX1080ti, and still cannot produce pleasant output.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
+This is the ground truth.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_truth.wav" type='audio/wav'></audio>
 
 ### 3. Synthesis as Style Transfer Onto Harmonics
