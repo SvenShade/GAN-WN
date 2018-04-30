@@ -3,9 +3,13 @@
 Current quantitative metrics (e.g. SNR) can be helpful in generally assessing the capabilities of an audio processing technique, when the ground truth is known. However, given the subjective nature of tasks such as instrumental audio synthesis, being able to audition the results is often more useful.
 
 
-### Super-resolution as Spectral Inpainting
+### 1. Source-separation as Denoising
 
-### Synthesis by Translating Harmonic Spectra
+### 2. Super-resolution as Spectral Inpainting
+
+### 3. Synthesis as Style Transfer (Translating Harmonic Spectra)
+
+[Link]https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_bandavg.wav
 
 
 
@@ -17,5 +21,3 @@ Current quantitative metrics (e.g. SNR) can be helpful in generally assessing th
 2. List
 
 **Bold** and _Italic_ and `Code` text
-
-[Link]https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_bandavg.wav
