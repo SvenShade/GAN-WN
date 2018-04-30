@@ -9,15 +9,5 @@ Current quantitative metrics (e.g. signal-to-noise ratio) can be helpful in gene
 
 ### 3. Synthesis as Style Transfer (Translating Harmonic Spectra)
 
-https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_bandavg.wav
 
-
-
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_bandavg.wav" type='audio/wav'></audio>
