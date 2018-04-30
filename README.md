@@ -1,6 +1,6 @@
 ## Here, you will find audio clips to augment this thesis.
 
-Current quantitative metrics (e.g. SNR) can be helpful in generally assessing the capabilities of an audio processing technique, when the ground truth is known. However, given the subjective nature of tasks such as instrumental audio synthesis, being able to audition the results is often more useful.
+Current quantitative metrics (e.g. signal-to-noise ratio) can be helpful in generally assessing the capabilities of an audio processing technique, when the ground truth is known. However, given the subjective nature of instrumental audio, being able to audition the results is often more useful.
 
 
 ### 1. Source-separation as Denoising
