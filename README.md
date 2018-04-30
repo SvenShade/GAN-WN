@@ -16,7 +16,7 @@ Then, after cGAN has performed inpainting on the lost (higher) frequencies, we r
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_cGAN_bandavg.wav" type='audio/wav'></audio>
 Here's the audio after a second cGAN has tried to restore detail from the lossy reconstruction process.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_cGAN_logcont.wav" type='audio/wav'></audio>
-Alternatively, we can use a Wavenet to reconstruct the raw audio directly from the Mel-spectrogram. However, this model took over 3 weeks to see convergence on our NVIDIA GTX1080ti, and still cannot produce pleasant output.
+Alternatively, we can use a Wavenet to reconstruct the raw audio directly from the Mel-spectrogram. However, this kind of modelling proved to be too resource intensive, taking over a fortnight to see convergence on our NVIDIA GTX1080ti, with less pleasant results than Griffin-Lim. Despite lacking the memory necessary to train a sufficiently complex model, the concept is there.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
 This is the ground truth.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_truth.wav" type='audio/wav'></audio>
