@@ -27,7 +27,6 @@ Here is the melody from the folk song, 'Scarborough Fair', as played by a sinewa
 These sinewaves include the fundamental as well as the first few harmonics, in order to provide structure for cGAN to translate.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_harmonics.wav" type='audio/wav'></audio>
 Here is the same harmonic track, with the violin 'style' applied:
-<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_bandavg.wav" type='audio/wav'></audio>
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_linreconst_logcontr.wav" type='audio/wav'></audio>
 
 Easter egg...
