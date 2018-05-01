@@ -20,6 +20,14 @@ Alternatively, we can use a Wavenet to reconstruct the raw audio directly from t
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
 This is the ground truth.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_truth.wav" type='audio/wav'></audio>
+Another example. This time, from Chopin. Here is the lofi clip:
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-lofi-clip.mp3" type='audio/mp3'></audio>
+Here is baseline performance (linear interpolation):
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-lin-clip.mp3" type='audio/mp3'></audio>
+Here is the result of our cGAN process.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-LC-clip.mp3" type='audio/mp3'></audio>
+Ground truth.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-gt-clip.mp3" type='audio/mp3'></audio>
 
 ### 3. Synthesis as Style Transfer Onto Harmonics
 
