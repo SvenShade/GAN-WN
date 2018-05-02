@@ -16,8 +16,6 @@ Then, after cGAN has performed inpainting on the lost (higher) frequencies, we r
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_cGAN_bandavg.wav" type='audio/wav'></audio>
 Here's the audio after a second cGAN has tried to restore detail from the lossy reconstruction process.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_bandavg-plus-logcont.wav" type='audio/wav'></audio>
-Alternatively, we can use a Wavenet to reconstruct the raw audio directly from the Mel-spectrogram. However, this kind of modelling proved to be too resource intensive, taking over a fortnight to see convergence on our NVIDIA GTX1080ti, with less pleasant results than Griffin-Lim. Despite lacking the memory necessary to train a sufficiently complex model, the concept is there.
-<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
 This is the ground truth.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_truth.wav" type='audio/wav'></audio>
 Another example. This time, from Chopin. Here is the lofi clip:
@@ -28,6 +26,14 @@ Here is the result of our cGAN process.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-LC-clip.mp3" type='audio/mp3'></audio>
 Ground truth.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/chopin-gt-clip.mp3" type='audio/mp3'></audio>
+
+Alternatively, we can use a Wavenet to reconstruct the raw audio directly from the Mel-spectrogram. This kind of modelling proved to be highly resource intensive, with training taking over a fortnight to see convergence on our NVIDIA GTX1080ti. Despite lacking the memory necessary to train a sufficiently complex model, the concept is there.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
+We can further improve the output of our unstable Wavenet. Instead of conditioning Wavenet on the spectrogram alone, we also feed in the timesteps of the original, lofi audio. At every step, we now take the average of both original audio and Wavenet's prediction (weighted towards the former). This can be thought of as a sort of teacher-forcing generation. As usual, that timestep becomes part of the series, and in turn influences future predictions. Here, we apply this to our Chopin clip.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/lofi-WN-20-iter1.wav" type='audio/wav'></audio>
+We can apply this iteratively, with each iteration shifting the signal towards the distribution captured by the Wavenet model. Here's the result of a second pass.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/lofi-WN-20-iter2.wav" type='audio/wav'></audio>
+
 
 ### 3. Synthesis as Style Transfer Onto Harmonics
 
