@@ -31,8 +31,6 @@ Alternatively, we can use a Wavenet to reconstruct the raw audio directly from t
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/paganini_WN_guidefactor30.wav" type='audio/wav'></audio>
 We can further improve the output of our unstable Wavenet. Instead of conditioning Wavenet on the spectrogram alone, we also feed in the timesteps of the original, lofi audio. At every step, we now take the average of both original audio and Wavenet's prediction (weighted towards the former). This can be thought of as a sort of teacher-forcing generation. As usual, that timestep becomes part of the series, and in turn influences future predictions. Here, we apply this to our Chopin clip.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/lofi-WN-20-iter1.wav" type='audio/wav'></audio>
-We can apply this iteratively, with each iteration shifting the signal towards the distribution captured by the Wavenet model. Here's the result of a second pass.
-<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/lofi-WN-20-iter2.wav" type='audio/wav'></audio>
 
 
 ### 3. Synthesis as Style Transfer Onto Harmonics
