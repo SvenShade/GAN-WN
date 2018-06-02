@@ -53,6 +53,7 @@ These sinewaves include the fundamental as well as the first few harmonics, in o
 Here is the same harmonic track, with the violin 'style' applied:
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/scarborough_H2R_enhance_linreconst_logcontr.wav" type='audio/wav'></audio>
 
-Easter egg...
+Finally, we leave the reader with the first 6 notes of the chorus of Rick Astley's "Never Gonna Give You Up", as played by a sinewave generator.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/rick_harmonics.wav" type='audio/wav'></audio>
+Here is the result of our method, applying violin stylisation :)
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/rick_synth.wav" type='audio/wav'></audio>
