@@ -22,6 +22,12 @@ We start with a recording of a piano and violin duet, playing a phrase from Bach
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/source_sep_full.wav" type='audio/wav'></audio>
 Following the top pipeline from the above figure, our process looks for frequencies specific to the violin, and attempts to silence the piano.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/source_sep_violin.wav" type='audio/wav'></audio>
+Another example from the same piece.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-ref.wav" type='audio/wav'></audio>
+Now, our CNN baseline has a go at isolating the violin.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-CNN.wav" type='audio/wav'></audio>
+The result from our method. It introduces a different sort of artefact, losing high-frequency fidelity primarily due to the lossy spectrogram reconstruction process. Yet, notice the piano source is much better attenuated.
+<audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-cGAN-Secx2.wav" type='audio/wav'></audio>
 
 ### 2. Super-resolution as Spectral Inpainting
 We start with a violin phrase by Paganini, at a sample rate of 4kHz (ultra low-fidelity).
