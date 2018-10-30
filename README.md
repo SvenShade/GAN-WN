@@ -16,7 +16,7 @@ We introduce two pipelines to achieve this, shown below. The top details GAN-S, 
 ![Pipelines](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/pipeline.png)
 
 Below is an example linear spectrogram, restored using the secondary cGAN. From left to right: descaled spectrogram, restoration, ground truth.
-![Reconst](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/GAN-S_reconst.png)
+![Reconst](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/GAN-S_reconst.jpg)
 
 Given the subjective nature of the first three tasks, we provide an audio demonstration of each below.
 
@@ -33,7 +33,7 @@ The result from our method. It introduces a different sort of artefact, losing h
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-cGAN-Secx2.wav" type='audio/wav'></audio>
 
 Below, we give a closer look at source-separation, with a ground-truth difference overlay. Alignments with ground truth are cyan. Areas where ground truth is missed are red. Interference (piano) is white. Observe cGAN's precision in removing interference, sometimes at the cost of detail.
-![Pipelines](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/overlay.png)
+![Pipelines](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/overlay.jpg)
 
 ### 2. Super-resolution as Spectral Inpainting
 We start with a violin phrase by Paganini, at a sample rate of 4kHz (ultra low-fidelity).
