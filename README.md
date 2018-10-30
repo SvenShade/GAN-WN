@@ -1,8 +1,8 @@
-## Here, you will find audio clips to augment this thesis.
+## Here, you will find spectrograms and audio clips to augment our paper.
 
-Current quantitative metrics (e.g. signal-to-noise ratio) can be helpful in generally assessing the capabilities of an audio processing technique, when the ground truth is known. However, given the subjective nature of instrumental audio, being able to audition the results is often more useful.
+Quantitative metrics can be helpful in generally assessing the capabilities of an audio processing technique, when the ground truth is known. However, given the subjective nature of instrumental audio, being able to audition the results is often more useful.
 
-At the beginning of Section 4.2 in our paper, we highlight analogous image tasks to each MIR task. To recap:
+In our paper, we highlight analogous image tasks to each MIR task. To recap:
 
 1. Source-separation becomes a denoising problem, reconstructing frequencies related to the signal and ignoring others. 
 
@@ -12,8 +12,11 @@ At the beginning of Section 4.2 in our paper, we highlight analogous image tasks
 
 4. Pitchtracking can be thought of as semantic segmentation in the same way that a satellite image might be translated into a road map. 
 
-Our pipelines for achieving these tasks are detailed in Figure 4.12 of our paper, which we show below.
+We introduce two pipelines to achieve this, shown below. The top details GAN-S, which uses a secondary cGAN stage to aid reconstruction, while the bottom details GAN-WN.
 ![Pipelines](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/pipeline.png)
+
+Below is an example linear spectrogram, restored using the secondary cGAN. From left to right: descaled spectrogram, restoration, ground truth.
+![Reconst](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/GAN-S_reconst.png)
 
 Given the subjective nature of the first three tasks, we provide an audio demonstration of each below.
 
@@ -28,6 +31,9 @@ Now, our CNN baseline has a go at isolating the violin.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-CNN.wav" type='audio/wav'></audio>
 The result from our method. It introduces a different sort of artefact, losing high-frequency fidelity primarily due to the lossy spectrogram reconstruction process. Yet, notice the piano source is much better attenuated.
 <audio controls> <source src="https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/SS-cGAN-Secx2.wav" type='audio/wav'></audio>
+
+Below, we give a closer look at source-separation, with a ground-truth difference overlay. Alignments with ground truth are cyan. Areas where ground truth is missed are red. Interference (piano) is white. Observe cGAN's precision in removing interference, sometimes at the cost of detail.
+![Pipelines](https://raw.githubusercontent.com/SvenShade/Thesis_Demo/master/overlay.png)
 
 ### 2. Super-resolution as Spectral Inpainting
 We start with a violin phrase by Paganini, at a sample rate of 4kHz (ultra low-fidelity).
